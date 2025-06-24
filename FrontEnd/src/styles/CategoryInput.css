@@ -1,0 +1,80 @@
+.category-input-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.product-input {
+    background-color: #f0f9ff;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #60a5fa;
+    outline: none;
+    width: 180px;
+    direction: rtl;
+    color: #1e40af;
+}
+
+.category-select {
+    background-color: #f0f9ff;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #60a5fa;
+    outline: none;
+    width: 180px;
+    direction: rtl;
+    color: #1e40af;
+}
+
+.add-product-btn {
+    background: linear-gradient(to bottom right, #e0f2fe, #dbeafe);
+    color: #2563eb;
+    border-radius: 8px;
+    font-weight: bold;
+    height: 40px;
+    padding: 0 16px;
+    border: 2px solid #60a5fa;
+    transition: all 0.3s ease;
+}
+
+.add-product-btn:hover {
+    background: linear-gradient(to bottom right, #fce7f3, #fbcfe8);
+    color: #60a5fa;
+    border-color:#3b82f6;
+}
+
+.confirm-order-btn {
+    border: 2px solid #3b82f6;
+    color: #1e3a8a;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 12px;
+    background-color: #e0f2fe;
+    transition: all 0.3s ease;
+}
+
+.confirm-order-btn:hover {
+    background-color: #dbeafe;
+}
+
+.download-order-btn {
+    border: 2px solid #6366f1;
+    color: #3730a3;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 12px;
+    background-color: #f0f9ff;
+    transition: all 0.3s ease;
+}
+
+.download-order-btn:hover {
+    background-color: #e0e7ff;
+}

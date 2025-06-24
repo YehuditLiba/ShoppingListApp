@@ -1,0 +1,297 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2349D85A-B586-49AD-974A-42367FC2174C}|Solution Items{2349D85A-B586-49AD-974A-42367FC2174C}|C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2349D85A-B586-49AD-974A-42367FC2174C}|Solution Items{2349D85A-B586-49AD-974A-42367FC2174C}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\soppinglistapi\\appsettings.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|solutionrelative:soppinglistapi\\appsettings.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\soppinglistapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|solutionrelative:soppinglistapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\soppinglistapi\\soppinglistapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|solutionrelative:soppinglistapi\\soppinglistapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\dal\\migrations\\shoppinglistcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\shoppinglistcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\dal\\seed\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|solutionrelative:dal\\seed\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\dal\\dalservices\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|solutionrelative:dal\\dalservices\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\dal\\migrations\\20250622230053_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20250622230053_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\soppinglistapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|solutionrelative:soppinglistapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\soppinglistapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|solutionrelative:soppinglistapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F48492A1-B713-4860-885A-B85D751C04F9}|BL\\BL.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\bl\\blapi\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F48492A1-B713-4860-885A-B85D751C04F9}|BL\\BL.csproj|solutionrelative:bl\\blapi\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\dal\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|solutionrelative:dal\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\soppinglistapi\\soppinglistapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|solutionrelative:soppinglistapi\\soppinglistapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\soppinglistapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8A91F436-A010-4DB5-9C32-175C843674A1}|SoppingListApi\\SoppingListApi.csproj|solutionrelative:soppinglistapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|c:\\users\\the user\\desktop\\shoppinglistapp\\backend\\dal\\models\\shoppinglistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}|DAL\\DAL.csproj|solutionrelative:dal\\models\\shoppinglistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\The user\\AppData\\Local\\SourceServer\\26d0c5fd9cc5631364b8d06312dbfd805cee1b91a5fccd0c1d039090995ec7cb\\BackEnd\\DAL\\Models\\ShoppingListContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "SoppingListApi\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\WeatherForecast.cs",
+              "RelativeToolTip": "SoppingListApi\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T22:22:05.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SoppingListApi.http",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\SoppingListApi.http",
+              "RelativeDocumentMoniker": "SoppingListApi\\SoppingListApi.http",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\SoppingListApi.http",
+              "RelativeToolTip": "SoppingListApi\\SoppingListApi.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-06-24T22:22:02.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-24T22:21:29.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShoppingListContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Migrations\\ShoppingListContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\ShoppingListContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Migrations\\ShoppingListContextModelSnapshot.cs",
+              "RelativeToolTip": "DAL\\Migrations\\ShoppingListContextModelSnapshot.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwEcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T11:23:29.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\Program.cs",
+              "RelativeDocumentMoniker": "SoppingListApi\\Program.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\Program.cs",
+              "RelativeToolTip": "SoppingListApi\\Program.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAD4vyQAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:25:48.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Local.json",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\appsettings.Local.json",
+              "RelativeDocumentMoniker": "SoppingListApi\\appsettings.Local.json",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\appsettings.Local.json",
+              "RelativeToolTip": "SoppingListApi\\appsettings.Local.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAACKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-22T18:41:43.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "SoppingListApi\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "SoppingListApi\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAkwDcAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T18:30:15.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SoppingListApi.csproj",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\SoppingListApi.csproj",
+              "RelativeDocumentMoniker": "SoppingListApi\\SoppingListApi.csproj",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\SoppingListApi.csproj",
+              "RelativeToolTip": "SoppingListApi\\SoppingListApi.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-22T18:27:55.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Products.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Models\\Products.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Products.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Models\\Products.cs",
+              "RelativeToolTip": "DAL\\Models\\Products.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAIwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:53:24.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Seed\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "DAL\\Seed\\DbSeeder.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Seed\\DbSeeder.cs",
+              "RelativeToolTip": "DAL\\Seed\\DbSeeder.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAcwAgAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:58:22.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\DalServices\\ProductService.cs",
+              "RelativeDocumentMoniker": "DAL\\DalServices\\ProductService.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\DalServices\\ProductService.cs",
+              "RelativeToolTip": "DAL\\DalServices\\ProductService.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAA6wBgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T23:12:17.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ShoppingListContext.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Models\\ShoppingListContext.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\ShoppingListContext.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Models\\ShoppingListContext.cs",
+              "RelativeToolTip": "DAL\\Models\\ShoppingListContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T18:44:39.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250622230053_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Migrations\\20250622230053_InitialCreate.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20250622230053_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\Migrations\\20250622230053_InitialCreate.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20250622230053_InitialCreate.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwA4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T23:02:55.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\BL\\BlApi\\ProductService.cs",
+              "RelativeDocumentMoniker": "BL\\BlApi\\ProductService.cs",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\BL\\BlApi\\ProductService.cs",
+              "RelativeToolTip": "BL\\BlApi\\ProductService.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA/wBMAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T18:26:57.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DAL.csproj",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\DAL.csproj",
+              "RelativeDocumentMoniker": "DAL\\DAL.csproj",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\DAL\\DAL.csproj",
+              "RelativeToolTip": "DAL\\DAL.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-22T19:57:29.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\appsettings.json",
+              "RelativeDocumentMoniker": "SoppingListApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\appsettings.json",
+              "RelativeToolTip": "SoppingListApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-22T20:06:59.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ShoppingListContext.cs",
+              "DocumentMoniker": "C:\\Users\\The user\\AppData\\Local\\SourceServer\\26d0c5fd9cc5631364b8d06312dbfd805cee1b91a5fccd0c1d039090995ec7cb\\BackEnd\\DAL\\Models\\ShoppingListContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\26d0c5fd9cc5631364b8d06312dbfd805cee1b91a5fccd0c1d039090995ec7cb\\BackEnd\\DAL\\Models\\ShoppingListContext.cs",
+              "ToolTip": "C:\\Users\\The user\\AppData\\Local\\SourceServer\\26d0c5fd9cc5631364b8d06312dbfd805cee1b91a5fccd0c1d039090995ec7cb\\BackEnd\\DAL\\Models\\ShoppingListContext.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\26d0c5fd9cc5631364b8d06312dbfd805cee1b91a5fccd0c1d039090995ec7cb\\BackEnd\\DAL\\Models\\ShoppingListContext.cs [Read Only]",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:23:46.338Z",
+              "EditorCaption": " [Read Only]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
