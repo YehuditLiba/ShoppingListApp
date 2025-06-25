@@ -69,7 +69,7 @@ const ShoppingDashboard: React.FC = () => {
     const fetchCategories = async (): Promise<void> => {
         setLoading(true);
         try {
-            const response: AxiosResponse<Category[]> = await axios.get('http://localhost:5201/api/Category');
+            const response: AxiosResponse<Category[]> = await axios.get(`${process.env.REACT_APP_API_URL}/api/Category`);
             setCategoriesState(response.data);
             dispatch(setCategories(response.data));
             console.log('Categories fetched:', response.data);
@@ -85,7 +85,7 @@ const ShoppingDashboard: React.FC = () => {
     const fetchProductsFromApi = async (): Promise<void> => {
         try {
             console.log('🌐 מבצע קריאת מוצרים מהשרת...');
-            const response: AxiosResponse<Product[]> = await axios.get('http://localhost:5201/api/Product');
+            const response: AxiosResponse<Product[]> = await axios.get(`${process.env.REACT_APP_API_URL}/api/Category`);
             const productsFromApi: Product[] = response.data.filter(product => product.amount > 0 && product.name);
             dispatch(setProducts(productsFromApi));
          //   saveProductsToLocalStorage(productsFromApi);
