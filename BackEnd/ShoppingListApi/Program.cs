@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuration
+
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true)
@@ -24,7 +24,7 @@ AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
 AppContext.SetSwitch("Npgsql.DisableNetworkingIPv6", true);
 
-//  Register Services 
+//Register Services 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins", policy =>
@@ -39,9 +39,9 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<ShoppingListContext>(options =>
     options.UseNpgsql(connectionString));
 
-// Dependency Injection 
-builder.Services.AddScoped<IProductService, BL.BlApi.ProductService>();     
-builder.Services.AddScoped<IProductRepository, DAL.Services.ProductService>(); 
+// === Dependency Injection ===
+builder.Services.AddScoped<IProductService, BL.BlApi.ProductService>();
+builder.Services.AddScoped<IProductRepository, DAL.Services.ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
@@ -57,21 +57,24 @@ using (var scope = app.Services.CreateScope())
     if (app.Environment.IsDevelopment())
     {
         context.Database.Migrate();
-
         DAL.Seed.DbSeeder.Seed(context);
     }
 }
 
-// Middleware
-app.UseSwagger();        
+app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseCors("AllowAllOrigins");
-app.UseHttpsRedirection();
+
+
+if (!app.Environment.IsProduction())
+{
+    app.UseHttpsRedirection();
+}
+
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.MapGet("/", () => "ShoppingList API is live!");
 
 app.Run();
