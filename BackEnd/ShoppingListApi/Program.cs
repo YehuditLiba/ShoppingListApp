@@ -51,10 +51,14 @@ using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ShoppingListContext>();
 
-    // Apply migrations 
-    context.Database.Migrate();
+    if (app.Environment.IsDevelopment())
+    {
+        // Apply migrations (safe only in development)
+        context.Database.Migrate();
 
-    DAL.Seed.DbSeeder.Seed(context);
+        // Optional: Seed test data
+        DAL.Seed.DbSeeder.Seed(context);
+    }
 }
 
 // === Middleware Pipeline ===
