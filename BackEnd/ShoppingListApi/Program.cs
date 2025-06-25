@@ -8,15 +8,18 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // === Load Configuration ===
-builder.Configuration.AddJsonFile("appsettings.Local.json", optional: false, reloadOnChange: true);
-Console.WriteLine("✅ Loaded appsettings.Local");
+builder.Configuration
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 if (string.IsNullOrEmpty(connectionString))
 {
-    throw new InvalidOperationException("❌ Connection string is not set in appsettings.Local.json");
+    throw new InvalidOperationException("❌ Connection string is not set in any configuration source");
 }
 Console.WriteLine($"🔗 Connection String: {connectionString}");
+
 
 // === Register Services ===
 builder.Services.AddCors(options =>
@@ -44,15 +47,13 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// === Database Migration + Seeding ===
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ShoppingListContext>();
 
-    // Apply migrations (safe to run always)
+    // Apply migrations 
     context.Database.Migrate();
 
-    // Seed once (only if relevant)
     DAL.Seed.DbSeeder.Seed(context);
 }
 
@@ -63,7 +64,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// 🚨 UseCors BEFORE HttpsRedirection
 app.UseCors("AllowAllOrigins");
 
 app.UseHttpsRedirection();
