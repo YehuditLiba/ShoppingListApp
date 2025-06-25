@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// === Load Configuration ===
+// Configuration
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true)
@@ -20,8 +20,11 @@ if (string.IsNullOrEmpty(connectionString))
 }
 Console.WriteLine($"🔗 Connection String: {connectionString}");
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+AppContext.SetSwitch("Npgsql.DisableNetworkingIPv6", true);
 
-// === Register Services ===
+//  Register Services 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins", policy =>
@@ -36,9 +39,9 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<ShoppingListContext>(options =>
     options.UseNpgsql(connectionString));
 
-// Dependency Injection - Services and Repositories
-builder.Services.AddScoped<IProductService, BL.BlApi.ProductService>();      // BL layer
-builder.Services.AddScoped<IProductRepository, DAL.Services.ProductService>(); // DAL layer
+// Dependency Injection 
+builder.Services.AddScoped<IProductService, BL.BlApi.ProductService>();     
+builder.Services.AddScoped<IProductRepository, DAL.Services.ProductService>(); 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
@@ -53,25 +56,22 @@ using (var scope = app.Services.CreateScope())
 
     if (app.Environment.IsDevelopment())
     {
-        // Apply migrations (safe only in development)
         context.Database.Migrate();
 
-        // Optional: Seed test data
         DAL.Seed.DbSeeder.Seed(context);
     }
 }
 
-// === Middleware Pipeline ===
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Middleware
+app.UseSwagger();        
+app.UseSwaggerUI();
 
 app.UseCors("AllowAllOrigins");
-
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGet("/", () => "ShoppingList API is live!");
+
 app.Run();
