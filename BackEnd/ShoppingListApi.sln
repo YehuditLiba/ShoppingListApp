@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL", "BL\BL.csproj", "{F484
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{3A8BA129-EAB9-4CC5-BDDF-B92A7A770554}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoppingListApi", "SoppingListApi\SoppingListApi.csproj", "{8A91F436-A010-4DB5-9C32-175C843674A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingListApi", "SoppingListApi\ShoppingListApi.csproj", "{8A91F436-A010-4DB5-9C32-175C843674A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2349D85A-B586-49AD-974A-42367FC2174C}"
 	ProjectSection(SolutionItems) = preProject

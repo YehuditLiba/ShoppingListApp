@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "Y7OgP5ZPAY7/9Y5PSjQuHivue1MXAjC6KdNzNkHgwWw=",
-  "Source": "SoppingListApi",
-  "BasePath": "_content/SoppingListApi",
+  "Hash": "W/8UG4UKV0uGLBxRvQRaeMx29+YWa87/2K1NDYUxNVI=",
+  "Source": "ShoppingListApi",
+  "BasePath": "_content/ShoppingListApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

@@ -2902,9 +2902,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\SoppingListApi.csproj",
-      "projectName": "SoppingListApi",
-      "projectPath": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\SoppingListApi.csproj",
+      "projectUniqueName": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\ShoppingListApi.csproj",
+      "projectName": "ShoppingListApi",
+      "projectPath": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\ShoppingListApi.csproj",
       "packagesPath": "C:\\Users\\The user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\The user\\Desktop\\ShoppingListApp\\BackEnd\\SoppingListApi\\obj\\",
       "projectStyle": "PackageReference",
@@ -2992,7 +2992,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "SoppingListApi depends on Microsoft.EntityFrameworkCore.Design (>= 7.0.21) but Microsoft.EntityFrameworkCore.Design 7.0.21 was not found. An approximate best match of Microsoft.EntityFrameworkCore.Design 8.0.0 was resolved.",
+      "message": "ShoppingListApi depends on Microsoft.EntityFrameworkCore.Design (>= 7.0.21) but Microsoft.EntityFrameworkCore.Design 7.0.21 was not found. An approximate best match of Microsoft.EntityFrameworkCore.Design 8.0.0 was resolved.",
       "libraryId": "Microsoft.EntityFrameworkCore.Design",
       "targetGraphs": [
         "net8.0"
