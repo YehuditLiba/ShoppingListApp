@@ -27,7 +27,7 @@ AppContext.SetSwitch("Npgsql.DisableNetworkingIPv6", true);
 // Services 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins", policy =>
+    options.AddDefaultPolicy(policy =>
     {
         policy.AllowAnyOrigin()
               .AllowAnyMethod()
@@ -47,7 +47,7 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//  Build & Migrate 
+//   Migrate 
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -62,6 +62,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+// Middleware
 app.Use(async (context, next) =>
 {
     if (context.Request.Method == HttpMethods.Options)
@@ -75,7 +76,7 @@ app.Use(async (context, next) =>
 });
 
 app.UseRouting();
-app.UseCors("AllowAllOrigins");
+app.UseCors(); 
 
 app.UseSwagger();
 app.UseSwaggerUI();
@@ -97,5 +98,5 @@ if (!string.IsNullOrEmpty(port))
 }
 else
 {
-    app.Run(); //     SSL + launchSettings.json
+    app.Run(); 
 }
