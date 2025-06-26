@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+// Configuration 
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true)
@@ -24,7 +24,7 @@ AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
 AppContext.SetSwitch("Npgsql.DisableNetworkingIPv6", true);
 
-//Register Services 
+// Services 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins", policy =>
@@ -39,7 +39,6 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<ShoppingListContext>(options =>
     options.UseNpgsql(connectionString));
 
-// === Dependency Injection ===
 builder.Services.AddScoped<IProductService, BL.BlApi.ProductService>();
 builder.Services.AddScoped<IProductRepository, DAL.Services.ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -48,28 +47,28 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//  Build & Migrate 
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ShoppingListContext>();
 
-    // yrt rum the migr..
     context.Database.Migrate();
 
-    //if the products is empty
     if (!context.Products.Any())
     {
         DAL.Seed.DbSeeder.Seed(context);
     }
 }
 
+// Middleware Pipeline 
+app.UseRouting(); 
+
+app.UseCors("AllowAllOrigins"); 
 
 app.UseSwagger();
 app.UseSwaggerUI();
-
-app.UseCors("AllowAllOrigins");
-
 
 if (!app.Environment.IsProduction())
 {
