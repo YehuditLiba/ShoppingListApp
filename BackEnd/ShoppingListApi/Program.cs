@@ -62,10 +62,20 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// Middleware Pipeline 
-app.UseRouting(); 
+app.Use(async (context, next) =>
+{
+    if (context.Request.Method == HttpMethods.Options)
+    {
+        context.Response.StatusCode = 200;
+        await context.Response.CompleteAsync();
+        return;
+    }
 
-app.UseCors("AllowAllOrigins"); 
+    await next();
+});
+
+app.UseRouting();
+app.UseCors("AllowAllOrigins");
 
 app.UseSwagger();
 app.UseSwaggerUI();
@@ -78,6 +88,3 @@ if (!app.Environment.IsProduction())
 app.UseAuthorization();
 
 app.MapControllers();
-app.MapGet("/", () => "ShoppingList API is live!");
-
-app.Run();
