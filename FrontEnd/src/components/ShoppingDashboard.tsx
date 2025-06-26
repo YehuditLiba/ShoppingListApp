@@ -10,6 +10,7 @@ import { Category } from '../modules/category';
 import { setProducts, increaseQuantity, decreaseQuantity, resetCart } from '../modules/productSlice';
 import { setCategories } from '../modules/categorySlice';
 import { RootState } from '../configuration/store';
+import { BASE_URL } from '../configuration/api';
 
 const ShoppingDashboard: React.FC = () => {
     const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -69,7 +70,7 @@ const ShoppingDashboard: React.FC = () => {
     const fetchCategories = async (): Promise<void> => {
         setLoading(true);
         try {
-            const response: AxiosResponse<Category[]> = await axios.get(`${process.env.REACT_APP_API_URL}/api/Category`);
+            const response: AxiosResponse<Category[]> = await axios.get(`${BASE_URL}/api/Category`);
             setCategoriesState(response.data);
             dispatch(setCategories(response.data));
             console.log('Categories fetched:', response.data);
@@ -84,14 +85,14 @@ const ShoppingDashboard: React.FC = () => {
 
     const fetchProductsFromApi = async (): Promise<void> => {
         try {
-            console.log('🌐 מבצע קריאת מוצרים מהשרת...');
-            const response: AxiosResponse<Product[]> = await axios.get(`${process.env.REACT_APP_API_URL}/api/Category`);
+            console.log(' קריאת מוצרים מהשרת...');
+            const response: AxiosResponse<Product[]> = await axios.get(`${BASE_URL}/api/Product`);
             const productsFromApi: Product[] = response.data.filter(product => product.amount > 0 && product.name);
             dispatch(setProducts(productsFromApi));
-         //   saveProductsToLocalStorage(productsFromApi);
-            console.log('🧠 נשמרו ב־Redux ו־localStorage:', productsFromApi);
+            //   saveProductsToLocalStorage(productsFromApi);
+            console.log(' נשמרו ב־Redux־ocalStorage:', productsFromApi);
         } catch (error) {
-            console.error('❌ שגיאה בשליפת מוצרים מהשרת:', error);
+            console.error(' שגיאה בשליפת מוצרים מהשרת:', error);
             setSnackbarMessage('שגיאה בטעינת מוצרים.');
             setOpenSnackbar(true);
         }
@@ -113,9 +114,9 @@ const ShoppingDashboard: React.FC = () => {
         };
 
         initProducts();
-        fetchCategories(); 
+        fetchCategories();
     }, [dispatch]);
-    
+
 
     const handleAddProduct = (product: { name: string; categoryId: string; amount: number }) => {
         let error = { productName: '', category: '' };
@@ -144,7 +145,7 @@ const ShoppingDashboard: React.FC = () => {
         } else {
             updatedProducts.push(newProduct);
         }
-        
+
 
         dispatch(setProducts(updatedProducts));
         saveProductsToLocalStorage(updatedProducts);
@@ -186,7 +187,7 @@ const ShoppingDashboard: React.FC = () => {
             .map(p => {
                 const category = categories.find(c => c.id === p.categoryId);
                 return {
-                    id: 0, // השרת מתעלם מזה בפועל
+                    id: 0,
                     name: p.name,
                     amount: p.amount,
                     categoryId: p.categoryId,
@@ -203,11 +204,10 @@ const ShoppingDashboard: React.FC = () => {
             return;
         }
 
-        console.log('🛒 נשלח להזמנה:', validProducts);
+        console.log(' נשלח להזמנה:', validProducts);
 
         try {
-            await axios.post(
-                'http://localhost:5201/api/Product/confirm-order',
+            await axios.post(`${BASE_URL}/api/Product/confirm-order`,
                 validProducts,
                 {
                     headers: {
@@ -216,12 +216,13 @@ const ShoppingDashboard: React.FC = () => {
                 }
             );
 
-            setSnackbarMessage('ההזמנה בוצעה בהצלחה! 🎉');
+            setSnackbarMessage('ההזמנה בוצעה בהצלחה');
             setOpenSnackbar(true);
             dispatch(resetCart());
             localStorage.removeItem('products');
-        } catch (error: unknown) {
-            console.error('❌ Error saving order:', error);
+        }
+        catch (error: unknown) {
+            console.error(' Error saving order:', error);
 
             if (axios.isAxiosError(error)) {
                 const responseError = error.response?.data;
@@ -240,8 +241,8 @@ const ShoppingDashboard: React.FC = () => {
             setOpenSnackbar(true);
         }
     };
-    
-    
+
+
 
     const handleCloseSnackbar = () => {
         setOpenSnackbar(false);

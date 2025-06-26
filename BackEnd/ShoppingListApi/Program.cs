@@ -54,12 +54,16 @@ using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ShoppingListContext>();
 
-    if (app.Environment.IsDevelopment())
+    // yrt rum the migr..
+    context.Database.Migrate();
+
+    //if the products is empty
+    if (!context.Products.Any())
     {
-        context.Database.Migrate();
         DAL.Seed.DbSeeder.Seed(context);
     }
 }
+
 
 app.UseSwagger();
 app.UseSwaggerUI();
