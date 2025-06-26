@@ -204,8 +204,8 @@ const ShoppingDashboard: React.FC = () => {
             return;
         }
 
-        console.log(' נשלח להזמנה:', validProducts);
-
+        console.log('נשלח להזמנה:', validProducts);
+        console.log('BASE_URL:', BASE_URL);
         try {
             await axios.post(`${BASE_URL}/api/Product/confirm-order`,
                 validProducts,
