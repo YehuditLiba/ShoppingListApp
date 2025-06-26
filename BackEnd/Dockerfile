@@ -17,5 +17,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/ShoppingListApi/out .
 
-EXPOSE 8080
+EXPOSE $PORT
 ENTRYPOINT ["dotnet", "ShoppingListApi.dll"]
