@@ -79,7 +79,6 @@ if (!app.Environment.IsProduction())
 
 app.UseAuthorization();
 
-app.MapGet("/", () => Results.Ok(" Shopping List API is running. Use /swagger to explore the API."));
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
