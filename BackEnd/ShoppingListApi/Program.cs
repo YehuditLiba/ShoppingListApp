@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuration 
+// Configuration
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true)
@@ -20,14 +20,15 @@ if (string.IsNullOrEmpty(connectionString))
 }
 Console.WriteLine($"🔗 Connection String: {connectionString}");
 
+// Legacy timestamp handling
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
 AppContext.SetSwitch("Npgsql.DisableNetworkingIPv6", true);
 
-// Services 
+// 🔐 CORS Policy - מותאם גם ללוקל וגם לענן
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         policy.AllowAnyOrigin()
               .AllowAnyMethod()
@@ -35,6 +36,7 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Services
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ShoppingListContext>(options =>
     options.UseNpgsql(connectionString));
@@ -47,9 +49,10 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//   Migrate 
+// Build app
 var app = builder.Build();
 
+// Database Migrate & Seed
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ShoppingListContext>();
@@ -63,20 +66,10 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Middleware
-app.Use(async (context, next) =>
-{
-    if (context.Request.Method == HttpMethods.Options)
-    {
-        context.Response.StatusCode = 200;
-        await context.Response.CompleteAsync();
-        return;
-    }
-
-    await next();
-});
-
 app.UseRouting();
-app.UseCors(); 
+
+// 🟢 יש להשתמש במדיניות שיצרנו למעלה
+app.UseCors("AllowAll");
 
 app.UseSwagger();
 app.UseSwaggerUI();
@@ -90,13 +83,13 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Cloud port
 var port = Environment.GetEnvironmentVariable("PORT");
-
 if (!string.IsNullOrEmpty(port))
 {
     app.Run($"http://0.0.0.0:{port}");
 }
 else
 {
-    app.Run(); 
+    app.Run();
 }

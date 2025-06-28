@@ -10,7 +10,7 @@ import { Category } from '../modules/category';
 import { setProducts, increaseQuantity, decreaseQuantity, resetCart } from '../modules/productSlice';
 import { setCategories } from '../modules/categorySlice';
 import { RootState } from '../configuration/store';
-import { BASE_URL } from '../configuration/api';
+import { BASE_URL, API_MODE } from '../configuration/api';
 
 const ShoppingDashboard: React.FC = () => {
     const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -205,8 +205,9 @@ const ShoppingDashboard: React.FC = () => {
         }
 
         console.log('נשלח להזמנה:', validProducts);
-        console.log('BASE_URL:', BASE_URL);
-        try {
+        console.log("API_MODE:", API_MODE);
+        console.log("BASE_URL:", BASE_URL);
+                try {
             await axios.post(`${BASE_URL}/api/Product/confirm-order`,
                 validProducts,
                 {
