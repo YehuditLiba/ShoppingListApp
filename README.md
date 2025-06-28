@@ -14,6 +14,9 @@
 - [📁 GitHub Repository](https://github.com/YehuditLiba/ShoppingListApp)
 - 🌐 [Frontend (Vercel)](https://shopping-list-app-git-main-yehudits-projects-d6745b39.vercel.app)
 - ⚙️ [Backend (Render)](https://shoppinglistapp-ol2i.onrender.com)
+<p align="center">
+  <img src="https://github.com/YehuditLiba/ShoppingListApp/blob/main/demo.gif?raw=true" alt="Demo GIF" style="border-radius: 12px; max-width: 90%;">
+</p>
 
 > ⚠️ שים לב: עקב שימוש בחשבונות חינמיים של Vercel ו־Render – ייתכנו זמני טעינה של עד 50 שניות בהרצה ראשונית.
 
