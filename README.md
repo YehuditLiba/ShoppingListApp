@@ -1,13 +1,11 @@
 ## ✨ Shopping List App ✨
 
-ניהול רשימת קניות דיגיטלית עם Frontend + Backend מודרניים, מבוססי ענן.
+ניהול רשימת קניות דיגיטלית עם Frontend + Backend, מבוססי ענן.
 
 ---
 
 ### 🎯 מטרת הפרויקט
 אפליקציית Shopping List מאפשרת ניהול נוח של קניות עם הוספת פריטים לפי קטגוריה, ספירת פריטים בסל ואישור הזמנה – הנשמרת במסד נתונים.
-
-> הפרויקט פותח לפי דרישות אגף התקשוב של משרד הביטחון, כולל פריסה בענן של הצד הלקוח והשרת.
 
 ---
 
@@ -20,14 +18,14 @@
 
 ---
 
-### 💻 התקנה והרצה מקומית
+###  התקנה והרצה מקומית
 
 #### דרישות מוקדמות:
 - Node.js + npm מותקנים
 - .NET 8 SDK מותקן
 - מסד נתונים PostgreSQL או Supabase פעיל
 
-#### 🚀 הרצת ה־Backend:
+####  הרצת ה־Backend:
 ```bash
 cd ShoppingListApi
 # ערוך appsettings.Local.json עם connection string מתאים
@@ -36,4 +34,11 @@ cd ShoppingListApi
 #   "DefaultConnection": "Host=localhost;Port=5432;Database=shopping;Username=postgres;Password=yourpassword"
 # }
 dotnet run
-
+####  הרצת ה־Frontend:
+cd client
+npm install
+npm start
+משתני סביבה (Frontend):
+REACT_APP_API_MODE=local
+REACT_APP_API_URL_LOCAL=http://localhost:8080
+REACT_APP_API_URL_PROD=https://shoppinglistapp-ol2i.onrender.com
