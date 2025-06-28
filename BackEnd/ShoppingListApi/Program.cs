@@ -25,7 +25,6 @@ AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
 AppContext.SetSwitch("Npgsql.DisableNetworkingIPv6", true);
 
-// 🔐 CORS Policy - מותאם גם ללוקל וגם לענן
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -68,7 +67,6 @@ using (var scope = app.Services.CreateScope())
 // Middleware
 app.UseRouting();
 
-// 🟢 יש להשתמש במדיניות שיצרנו למעלה
 app.UseCors("AllowAll");
 
 app.UseSwagger();
@@ -80,6 +78,12 @@ if (!app.Environment.IsProduction())
 }
 
 app.UseAuthorization();
+
+app.MapGet("/", () => Results.Ok(" Shopping List API is running. Use /swagger to explore the API."));
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+app.MapFallbackToFile("index.html");
 
 app.MapControllers();
 
