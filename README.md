@@ -1,44 +1,85 @@
-## ✨ Shopping List App ✨
+# ✨ Shopping List App - Production Guide ✨
 
-ניהול רשימת קניות דיגיטלית עם Frontend + Backend, מבוססי ענן.
+אפליקציית Shopping List היא אפליקציה לניהול קניות, הכוללת ממשק נוח להוספת פריטים לפי קטגוריות, ספירת פריטים בסל, ואישור הזמנה הנשמרת במסד נתונים.
+
+הפרויקט פותח לפי דרישות, וכולל:
+- פריסה מלאה בענן (Frontend + Backend)
+- שימוש בטכנולוגיות מודרניות בצד לקוח ושרת
+- מימוש כל הדרישות הפונקציונליות.
 
 ---
 
-### 🎯 מטרת הפרויקט
-אפליקציית Shopping List מאפשרת ניהול נוח של קניות עם הוספת פריטים לפי קטגוריה, ספירת פריטים בסל ואישור הזמנה – הנשמרת במסד נתונים.
+## 🚀 קישורים חשובים
 
----
-
-### 🔗 קישורים חשובים
-- [GitHub Repository](https://github.com/YehuditLiba/ShoppingListApp)
+- [📁 GitHub Repository](https://github.com/YehuditLiba/ShoppingListApp)
 - 🌐 [Frontend (Vercel)](https://shopping-list-app-git-main-yehudits-projects-d6745b39.vercel.app)
 - ⚙️ [Backend (Render)](https://shoppinglistapp-ol2i.onrender.com)
 
-> ⏱️ האפליקציה מתארחת בענן (חינם) ולכן ייתכן עיכוב של 30–50 שניות בעת טעינה ראשונית.
+> ⚠️ שים לב: עקב שימוש בחשבונות חינמיים של Vercel ו־Render – ייתכנו זמני טעינה של עד 50 שניות בהרצה ראשונית.
 
 ---
 
-###  התקנה והרצה מקומית
+## 📦 התקנה והרצה מקומית
 
-#### דרישות מוקדמות:
+### ✅ דרישות מוקדמות
+
 - Node.js + npm מותקנים
 - .NET 8 SDK מותקן
-- מסד נתונים PostgreSQL או Supabase פעיל
+- מסד PostgreSQL פעיל או Supabase
 
-####  הרצת ה־Backend:
+---
+
+### 🖥️ הרצת Backend
+
 ```bash
 cd ShoppingListApi
-# ערוך appsettings.Local.json עם connection string מתאים
-# דוגמה:
+# עריכת connection string בקובץ appsettings.Local.json:
+
 # "ConnectionStrings": {
 #   "DefaultConnection": "Host=localhost;Port=5432;Database=shopping;Username=postgres;Password=yourpassword"
 # }
+
 dotnet run
-####  הרצת ה־Frontend:
+🧑‍💻 הרצת Frontend
+
 cd client
 npm install
 npm start
-משתני סביבה (Frontend):
+
+ משתני סביבה (client/.env):
+
 REACT_APP_API_MODE=local
 REACT_APP_API_URL_LOCAL=http://localhost:8080
-REACT_APP_API_URL_PROD=https://shoppinglistapp-ol2i.onrender.com
+REACT_APP_API_URL_PROD=https://shoppinglis
+
+טכנולוגיות עיקריות
+ Frontend
+React + TypeScript
+
+Redux Toolkit לניהול state
+
+Ant Design לספריית ממשק משתמש
+
+Axios לקריאות HTTP
+
+ Backend
+ASP.NET Core 8
+
+Entity Framework Core
+
+PostgreSQL
+
+☁️ פריסה בענן
+Vercel (Frontend)
+
+Render (Backend)
+
+🌟 יכולות נוספות
+🧠 שימוש בתבניות Redux מתקדמות
+
+🐳 שימוש ב־Dockerfile לפריסה חיצונית
+
+ DbSeeder להזנת קטגוריות ראשוניות
+
+✅ טיפול מלא בבקשות OPTIONS ו־CORS
+
