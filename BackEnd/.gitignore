@@ -2,12 +2,10 @@ appsettings.Local.json
 .env
 .env.local
 .vs/
-bin/
 obj/
 
 #  
 dist/
-build/
 
 logs/
 
