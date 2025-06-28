@@ -7,7 +7,7 @@ appsettings.Local.json
 .vscode/
 
 dist/
-build/
+
 
 # Node.js
 node_modules/
