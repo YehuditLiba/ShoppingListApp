@@ -9,22 +9,22 @@
 
 ---
 
-## 🚀 קישורים חשובים
+##  קישורים חשובים
 
-- [📁 GitHub Repository](https://github.com/YehuditLiba/ShoppingListApp)
-- 🌐 [Frontend (Vercel)](https://shopping-list-app-git-main-yehudits-projects-d6745b39.vercel.app)
-- ⚙️ [Backend (Render)](https://shoppinglistapp-ol2i.onrender.com)
+- [ GitHub Repository](https://github.com/YehuditLiba/ShoppingListApp)
+-  [Frontend (Vercel)](https://shopping-list-app-git-main-yehudits-projects-d6745b39.vercel.app)
+-  [Backend (Render)](https://shoppinglistapp-ol2i.onrender.com)
 <p align="center">
   <img src="https://github.com/YehuditLiba/ShoppingListApp/blob/main/demo.gif?raw=true" alt="Demo GIF" style="border-radius: 12px; max-width: 90%;">
 </p>
 
-> ⚠️ שים לב: עקב שימוש בחשבונות חינמיים של Vercel ו־Render – ייתכנו זמני טעינה של עד 50 שניות בהרצה ראשונית.
+>  שים לב: עקב שימוש בחשבונות חינמיים של Vercel ו־Render – ייתכנו זמני טעינה של עד 50 שניות בהרצה ראשונית.
 
 ---
 
-## 📦 התקנה והרצה מקומית
+##  התקנה והרצה מקומית
 
-### ✅ דרישות מוקדמות
+###  דרישות מוקדמות
 
 - Node.js + npm מותקנים
 - .NET 8 SDK מותקן
@@ -32,7 +32,7 @@
 
 ---
 
-### 🖥️ הרצת Backend
+###  הרצת Backend
 
 ```bash
 cd ShoppingListApi
@@ -43,7 +43,7 @@ cd ShoppingListApi
 # }
 
 dotnet run
-🧑‍💻 הרצת Frontend
+ הרצת Frontend
 
 cd client
 npm install
@@ -72,17 +72,17 @@ Entity Framework Core
 
 PostgreSQL
 
-☁️ פריסה בענן
+ פריסה בענן
 Vercel (Frontend)
 
 Render (Backend)
 
-🌟 יכולות נוספות
-🧠 שימוש בתבניות Redux מתקדמות
+ יכולות נוספות
+ שימוש בתבניות Redux מתקדמות
 
-🐳 שימוש ב־Dockerfile לפריסה חיצונית
+ שימוש ב־Dockerfile לפריסה חיצונית
 
  DbSeeder להזנת קטגוריות ראשוניות
 
-✅ טיפול מלא בבקשות OPTIONS ו־CORS
+ טיפול מלא בבקשות OPTIONS ו־CORS
 
