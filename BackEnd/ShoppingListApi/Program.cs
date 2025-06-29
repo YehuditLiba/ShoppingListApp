@@ -4,6 +4,7 @@ using DAL.Services;
 using BL.Interfaces;
 using BL.BlApi;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,11 +17,11 @@ builder.Configuration
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 if (string.IsNullOrEmpty(connectionString))
 {
-    throw new InvalidOperationException("❌ Connection string is not set in any configuration source");
+    throw new InvalidOperationException(" Connection string is not set in any configuration source");
 }
-Console.WriteLine($"🔗 Connection String: {connectionString}");
+Console.WriteLine($" Connection String: {connectionString}");
 
-// Legacy timestamp handling
+// Legacy 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
 AppContext.SetSwitch("Npgsql.DisableNetworkingIPv6", true);
@@ -51,7 +52,6 @@ builder.Services.AddSwaggerGen();
 // Build app
 var app = builder.Build();
 
-// Database Migrate & Seed
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ShoppingListContext>();
@@ -66,9 +66,7 @@ using (var scope = app.Services.CreateScope())
 
 // Middleware
 app.UseRouting();
-
 app.UseCors("AllowAll");
-
 app.UseSwagger();
 app.UseSwaggerUI();
 
@@ -79,10 +77,31 @@ if (!app.Environment.IsProduction())
 
 app.UseAuthorization();
 
-app.UseDefaultFiles();
-app.UseStaticFiles();
+// Serve frontend from 'build' folder 
+var frontendPath = Path.Combine(Directory.GetCurrentDirectory(), "build");
+if (Directory.Exists(frontendPath))
+{
+    app.UseDefaultFiles(new DefaultFilesOptions
+    {
+        FileProvider = new PhysicalFileProvider(frontendPath),
+        RequestPath = ""
+    });
 
-app.MapFallbackToFile("index.html");
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(frontendPath),
+        RequestPath = ""
+    });
+
+    app.MapFallbackToFile("{*path:nonfile}", "index.html", new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(frontendPath)
+    });
+}
+else
+{
+    Console.WriteLine(" Warning: 'build' folder not found. Frontend will not be served.");
+}
 
 app.MapControllers();
 
